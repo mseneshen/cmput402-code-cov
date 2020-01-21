@@ -29,12 +29,6 @@ jobs:
     - name: Run jacoco
       run: ./gradlew jacocoTestReport
 
-    - name: Tree pls help me
-      run: sudo apt install tree
-
-    - name: Plant a tree mr beast
-      run: tree .
-
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }} #required
