@@ -26,6 +26,9 @@ jobs:
     - name: Run tests
       run: ./gradlew test
 
+    - name: Run jacoco
+      run: ./gradlew jacocoTestReport
+
     - name: Tree pls help me
       run: sudo apt install tree
 
@@ -35,5 +38,5 @@ jobs:
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }} #required
-        file: ./build/jacoco_reports/distribution/jacocoTestReport.xml
+        file: ./build/jacoco_reports/test/jacocoTestReport.xml
         fail_ci_if_error: true
