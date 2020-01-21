@@ -26,6 +26,15 @@ jobs:
     - name: Run tests
       run: ./gradlew test
 
+    - name: Checking 1
+      run: ls ./build/.
+
+    - name: Checking 2
+      run: ls ./build/jacoco_reports/.
+
+    - name: Checking 3
+      run: ls ./build/jacoco_reports/test/.
+
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }} #required
