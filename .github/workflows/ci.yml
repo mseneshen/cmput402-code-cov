@@ -26,6 +26,9 @@ jobs:
     - name: Run tests
       run: ./gradlew test
 
+    - name: Testing still
+      run: ls ./build/jacoco_reports/distribution/.
+
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }} #required
